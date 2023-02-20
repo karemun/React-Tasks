@@ -1,5 +1,10 @@
+import {useContext} from 'react'
+import {TaskContext} from '../context/TaskContext'
+
 //Muestra los datos de la tarea
-export default function TaskCard({task, deleteTask}) {
+export default function TaskCard({task}) {
+    const { deleteTask } = useContext(TaskContext)
+
     return (
         <div>
             <h1>{ task.title }</h1>
