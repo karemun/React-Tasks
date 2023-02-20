@@ -19,19 +19,27 @@ function TaskForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit}> {/* Al mandar el formulario, activa la funcion */}
+        <div className='max-w-md mx-auto'>
+            <form className='bg-slate-800 p-8 mb-4'
+            onSubmit={handleSubmit}> {/* Al mandar el formulario, activa la funcion */}
+                <h1 className='text-2xl font-bold text-white mb-3'>Crea tu tarea</h1>
+                <input placeholder="Escribe tu tarea" 
+                onChange={(e) => setTitle(e.target.value)}
+                value={title}
+                className='bg-slate-300 p-2 w-full mb-2'
+                autoFocus /> {/* Se auto selecciona */}
 
-            <input placeholder="Escribe tu tarea" 
-            onChange={(e) => setTitle(e.target.value)}
-            value={title}
-            autoFocus /> {/* Se auto selecciona */}
+                <textarea placeholder='Escribe la descripcion de la tarea'
+                onChange={(e) => setDescription(e.target.value)}
+                className='bg-slate-300 p-3 w-full mb-2'
+                value={description} ></textarea>
 
-            <textarea placeholder='Escribe la descripcion de la tarea'
-            onChange={(e) => setDescription(e.target.value)}
-            value={description} ></textarea>
-
-            <button>Guardar</button>
-        </form>
+                <button
+                className='bg-indigo-500 px-3 py-1 text-white'>
+                    Guardar
+                </button>
+            </form>
+        </div>
     )
 }
 

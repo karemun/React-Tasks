@@ -7,10 +7,12 @@ function App() {
     
 
   return (
-    <>
-      <TaskForm />
-      <TaskList />
-    </>
+    <main className='bg-zinc-900 h-screen'>
+      <div className='container mx-auto p-6'>
+        <TaskForm />
+        <TaskList />
+      </div>
+    </main>
   )
 }
 
