@@ -21,10 +21,16 @@ function App() {
       }])
     }
 
+    //FUNCION QUE ELIMINA UNA TAREA
+    function deleteTask(taskId) {
+      //Si es true, el elemento se queda, se actualiza el arreglo
+      setTasks(tasks.filter(task => task.id !== taskId));
+    }
+
   return (
     <>
       <TaskForm createTask={createTask} />  {/* Envia la funcion createTask */}
-      <TaskList tasks={tasks} />            {/* Envia el arreglo de datos */}
+      <TaskList tasks={tasks} deleteTask={deleteTask} />  {/* Envia el arreglo de datos y la funcion */}
     </>
   )
 }
