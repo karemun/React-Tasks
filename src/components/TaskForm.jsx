@@ -35,7 +35,7 @@ function TaskForm() {
                 value={description} ></textarea>
 
                 <button
-                className='bg-indigo-500 px-3 py-1 text-white'>
+                className='bg-indigo-500 px-3 py-1 text-white rounded-md mt-4 hover:bg-blue-300'>
                     Guardar
                 </button>
             </form>

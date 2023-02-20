@@ -2,7 +2,6 @@ import {useContext} from 'react'
 import TaskCard from './TaskCard'
 import {TaskContext} from '../context/TaskContext'
 
-//Va a traer props o {tasks}
 function TaskList() {
     const { tasks } = useContext(TaskContext)
 
@@ -16,7 +15,7 @@ function TaskList() {
                 tasks.map((task) => (
                     /**
                      * Se pone el key para evitar errores
-                     * Manda una tarea del arreglo, y la funcion delete
+                     * Manda una tarea del arreglo
                      */
                     <TaskCard key={task.id} task={task} />
                 ))

@@ -1,5 +1,5 @@
 import {createContext, useState, useEffect} from 'react'
-import {tasks as data} from '../data/tasks' //Se le asigna un alias
+import {tasks as data} from '../data/tasks'     //Se le asigna un alias
 export const TaskContext = createContext();     //Funcion que almacena los datos
 
 
